@@ -1,5 +1,30 @@
 <title> osthetweaker </title>
 <marquee> Upgrades may effect this website. </marquee>
 <img src="https://yt3.ggpht.com/a-/AOh14GjbR52WVYxT9wiG_6VbVbmBw8Thj086a5E0srDz3w=s108-c-k-c0x00ffffff-no-rj" alt="My Cat">
-<iframe width="300" height="400" src="https://www.youtube.com/embed/sl_qEOhB4Tk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<a href="https://osthetweaker.github.io/tweaks/"> Tweaks </a>
+<html>
+<head>
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+</head>
+
+<body onload="startTime()">
+
+<div id="txt"></div>
+
+</body>
+</html>
