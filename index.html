@@ -29,19 +29,14 @@ setInterval(GetClock,1000);
 
 </script>
 <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
 <script>
   function addDarkmodeWidget() {
     new Darkmode().showWidget();
   }
   window.addEventListener('load', addDarkmodeWidget);
-
-<!-- Add a placeholder for the Twitch embed -->
 <div id="twitch-embed"></div>
-
-<!-- Load the Twitch embed script -->
 <script src="https://player.twitch.tv/js/embed/v1.js"></script>
-
-<!-- Create a Twitch.Player object. This will render within the placeholder div -->
 <script type="text/javascript">
   new Twitch.Player("twitch-embed", {
     channel: "os_the_creator"
